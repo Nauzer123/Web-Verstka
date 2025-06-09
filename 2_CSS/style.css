@@ -1,14 +1,17 @@
-h1 {
-    font-size: 30px;
-    font-style: italic;
+* {
+    box-sizing: border-box;
 }
 
-#heading {
-    color: blue;
+.parent {
+    font-size: 0px;
+    width: 1000px;
+    margin 0 auto;
+    background-color: aqua;
 }
 
-.heading {
-    color: red;
-}
-
-=
+.element {
+    font-size: 14px;
+    outline: 1px solid black;
+    display: inline-block;
+    width: 333px;
+} 

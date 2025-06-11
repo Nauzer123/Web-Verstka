@@ -1,17 +1,17 @@
-* {
-    box-sizing: border-box;
-}
-
-.parent {
-    font-size: 0px;
-    width: 1000px;
-    margin 0 auto;
-    background-color: aqua;
-}
-
-.element {
-    font-size: 14px;
-    outline: 1px solid black;
+.block {
     display: inline-block;
-    width: 333px;
-} 
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: crimson;
+}
+
+.relative {
+    position: relative;
+    background-color: #000;
+}
+
+.block {
+    left: 50px;
+    top: 5px;
+}

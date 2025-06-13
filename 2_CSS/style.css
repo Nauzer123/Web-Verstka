@@ -1,17 +1,11 @@
-.block {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    background-color: crimson;
-}
-
-.relative {
-    position: relative;
-    background-color: #000;
-}
-
-.block {
-    left: 50px;
-    top: 5px;
+.testtex {
+    width: 1000px;
+    margin: 400px;
+    font-family: arial;
+    font-size: 20px;
+    color: coral;
+    text-transform: lowercase;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: 10px;
 }

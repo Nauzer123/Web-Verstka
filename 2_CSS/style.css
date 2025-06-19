@@ -1,9 +1,20 @@
-.pix {
-    display: block;
-    border: 1px solid rgba(red, green, white 0.3);
-    width: 1920px;
-    height: 1080px;
-    background-image: url('https://avatars.mds.yandex.net/i?id=b20d9d831f3241db3d2be8a33977a6fe_l-4767164-images-thumbs&n=13');   
-    background-position: center center;
-    
+ul {
+    list-style: none;
+    width: 80px;
+    outline: 5px solid black;
+}
+
+button {
+    cursor: pointer;
+    margin-left: 25px;
+    font-family: 'Courier New';
+}
+
+a {
+  /* visibility: hidden;  */
+  /* opacity: 0; */
+  font-style: italic;
+}
+body {
+    margin: 400px 800px;
 }

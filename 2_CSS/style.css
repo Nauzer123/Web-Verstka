@@ -1,20 +1,8 @@
-ul {
-    list-style: none;
-    width: 80px;
-    outline: 5px solid black;
-}
-
-button {
-    cursor: pointer;
-    margin-left: 25px;
-    font-family: 'Courier New';
-}
-
-a {
-  /* visibility: hidden;  */
-  /* opacity: 0; */
-  font-style: italic;
-}
 body {
-    margin: 400px 800px;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: italic;
+    width: 1500px;
+    margin: 0 auto;
 }

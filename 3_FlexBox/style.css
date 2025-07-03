@@ -1,0 +1,11 @@
+.child {
+    min-height: 150px;
+    background-color: lightskyblue;
+    margin: 10px;
+    padding: 20px;
+}
+
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+}

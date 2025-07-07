@@ -1,4 +1,7 @@
 .child {
+    flex-basis: 25%;
+    flex-grow: 1;
+    flex-shrink: 0; /* <-- если поставить 1, то мы разрешим сжатие*/
     min-height: 150px;
     background-color: lightskyblue;
     margin: 10px;
@@ -7,5 +10,8 @@
 
 .parent {
     display: flex;
-    flex-wrap: wrap;
+}
+
+.test {
+    flex-shrink: 1;
 }

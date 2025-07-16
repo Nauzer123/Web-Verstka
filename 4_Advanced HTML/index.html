@@ -8,16 +8,20 @@
 </head>
 <body>
     <form action="https://jsonplaceholder.typicode.com/posts" method="post">
-        <input type="text" required maxlength="10" placeholder="Введите имя">
-        <input type="number" min="3" max="12">
-        <input type="email">
-        <input type="tel">
-        <input type="password">
-        <input type="date">
-        <input type="search">
-        <input type="file" accept="image/*">
-        <input type="hidden">
+    <fieldset>
+        <legend>Выбор пола</legend>
+        <label>
+            <input type="radio" name="gender" value="Мужской пол">Мужской пол
+        </label>
+        <input type="radio" checked name="gender" value="Женский пол">Женский пол
+        <textarea name="message" placeholder="Введите сообщение"></textarea>
+        <select name="city">
+            <option value="Жирновск">Жирновск</option>
+            <option value="Волгоград">Волгоград</option>
+            <option value="Саратов" disabled>Саратов</option>
+        </select>
         <button type="submit">Отправить форму</button>
+    </fieldset>
     </form>
 </body>
 </html>

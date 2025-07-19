@@ -1,0 +1,7 @@
+input[type="email"]:valid {
+    background-color: lime;
+}
+
+input[type="email"]:invalid {
+    background-color: red;
+}

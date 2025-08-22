@@ -1,0 +1,1260 @@
+/* Подключение шрифта (замените на актуальный способ подключения Muller) */
+@font-face {
+    font-family: 'Muller';
+    src: url('fonts/MullerRegular.woff2') format('woff2'),
+         url('fonts/MullerRegular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('fonts/MullerMedium.woff2') format('woff2'),
+         url('fonts/MullerMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('fonts/MullerBold.woff2') format('woff2'),
+         url('fonts/MullerBold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('fonts/MullerRegularItalic.woff2') format('woff2'),
+         url('fonts/MullerRegularItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Muller", sans-serif;
+    overflow-x: hidden; /* Скрываем горизонтальный скролл */
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;    
+}
+
+/* Стили для Header */
+.header {
+    width: 100%;
+    height: 88px;
+    margin-left: 40px;
+    background: #fff;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.header__logo {
+    display: inline-block;
+    transform: translate(-2px, 2px);
+}
+
+.nav {
+    margin-right: auto;
+    margin-left: 80px;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: 59px;
+    align-items: center;
+}
+
+.nav__link {
+    text-decoration: none;
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #121723;
+    display: inline-block;
+    padding: 4px 0; /* Добавляем отступ для прямоугольника */
+}
+
+.nav__link {
+    text-decoration: none;
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #121723;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 3px; /* Добавляем место для бордера */
+    padding: 4px 10px; /* Добавляем padding */
+    margin: -4px -10px; /* Компенсируем padding */
+    z-index: 1;
+}
+
+.nav__link:hover {
+    color: #6d31ee;
+}
+
+.nav__link:focus {
+    outline: none;
+    color: #fff;
+    background: #aa9dfa; /* Простой background */
+}
+
+.nav__link:active {
+    color: #4f28a5;
+    background: #4f28a5; /* Для active */
+}
+
+.nav__item:nth-child(1) { /* Подкасты */
+    margin-top: 1px;
+    margin-left: -2px;
+}
+
+.nav__item:nth-child(2) { /* Передачи */
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+.nav__item:nth-child(3) { /* Гости */
+    margin-top: 2px;
+    margin-left: 1px;
+}
+
+.nav__item:nth-child(4) { /* Плейлисты */
+    margin-top: 2px;
+    margin-left: 1px;
+}
+
+.nav__item:nth-child(5) { /* О нас */
+    margin-top: 1px;
+    margin-left: 0px;
+}
+
+
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-58px);
+    transition: stroke 0.3s ease; /* Добавляем плавный переход */
+}
+
+.search-btn:hover svg path {
+    stroke: #aa9dfa; /* Hover - цвет #aa9dfa */
+}
+
+.search-btn:focus {
+    outline: none;
+}
+
+.search-btn:focus svg path {
+    stroke: #aa9dfa; /* Focus - цвет #aa9dfa */
+}
+
+.search-btn:active svg path {
+    stroke: #4f28a5; /* Active - цвет #4f28a5 */
+}
+
+/* Стили для Hero */
+.hero {
+    background: #fff; 
+    width: 100%;
+    height: 450px;
+    transform: translate(36px, 36px);
+}
+
+.hero__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.hero__content {
+    flex: 0 1 50%;
+    transform: translate(2px, -1px); /* 2px вправо и 2px ВНИЗ (было -2px) */
+}
+
+.hero__title {
+    font-family: "Muller", sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 100%;
+    color: #121723;
+    margin-bottom: 14px;
+}
+
+.hero__title-italic {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.hero__text {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #121723;
+    margin-bottom: 40px;
+    width: 600px;
+    transform: translate(0px, -2px);
+}
+
+.hero__button {
+    border: 2px solid transparent; /* Добавляем прозрачный border */
+    border-radius: 40px;
+    padding: 25px 54px;
+    box-sizing: border-box; /* Важно! */
+    padding: 23px 52px; /* Уменьшаем padding чтобы компенсировать border */
+    width: 245px;
+    height: 70px;
+    background: #6d31ee;
+    cursor: pointer;
+    font-family: "Muller", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    transform: translateX(-2px) translateY(3px); /* 2px влево и 2px ВВЕРХ */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.hero__button:hover {
+    background: #aa9dfa; /* Hover - цвет #aa9dfa */
+}
+
+.hero__button:focus {
+    outline: none;
+    background: #aa9dfa; /* Focus - цвет #aa9dfa */
+    border: 2px solid #4f28a5; /* Focus - border */
+}
+
+.hero__button:active {
+    background: #4f28a5; /* Active - цвет #4f28a5 */
+}
+
+.hero__image {
+    flex: 0 1 50%;
+    width: 354px;
+    height: 380px;
+    transform: translate(127px, -6px); /* 30px вправо (было 2px) и 10px вверх */
+}
+
+/* Стили для Подкастов */
+.podcasts {
+    padding: 80px 0;
+    background: #F2F2F2;
+    transform: translate(37px, 15px); /* 5px вправо и 5px вниз */
+}
+
+.podcasts::before {
+    content: '';
+    position: absolute;
+    top: -15px; /* Поднимаем фон на 10px вверх */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #E6E8EC;
+    z-index: -1; /* Отправляем фон назад */
+}
+
+.podcasts__title {
+    font-family: "Muller", sans-serif;
+    font-weight: 400; /* Меняем на обычный шрифт */
+    font-size: 48px;
+    color: #121723;
+    margin-bottom: 40px;
+}
+
+.podcasts__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.podcast-card {
+    display: flex;
+    width: 540px;
+    height: 140px;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    transform: translateY(-10px);
+    transition: all 0.3s ease; /* Добавляем плавный переход */
+    border: 1px solid transparent; /* Прозрачный бордер для плавности */
+}
+
+.podcast-card:hover {
+    transform: translateY(-10px) scale(1.02); /* Увеличиваем немного при наведении */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+    border-color: #6d31ee; /* Фиолетовый бордер при наведении */
+}
+
+.podcast-card:active {
+    transform: translateY(-10px) scale(0.98); /* Уменьшаем при клике */
+    background: #f8f5ff; /* Светлый фиолетовый фон при клике */
+}
+
+/* Для четных карточек */
+.podcast-card:nth-child(even) {
+    transform: translateY(-10px) translateX(-30px);
+    transition: all 0.3s ease;
+}
+
+.podcast-card:nth-child(even):hover {
+    transform: translateY(-10px) translateX(-30px) scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-color: #6d31ee;
+}
+
+.podcast-card:nth-child(even):active {
+    transform: translateY(-10px) translateX(-30px) scale(0.98);
+    background: #f8f5ff;
+}
+
+.podcast-card:nth-child(even) {
+    transform: translateY(-10px) translateX(-30px); /* 3px вниз + 10px вправо */
+}
+
+.podcast-card__image {
+    width: 112px;
+    height: 140px;
+    object-fit: cover;
+    position: relative;
+}
+
+.podcast-card__date {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #E6E8EC;
+    padding: 3px 8px;
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    align-items: center;
+    color: #121723;
+    z-index: 2;
+    width: 51px; /* Фиксированная ширина */
+    height: 16px; /* Фиксированная высота */
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.podcast-card__content {
+    flex: 1;
+    padding: 20px;
+}
+
+.podcast-card__time {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 12px; /* Уже правильный размер */
+    color: #121723;
+    margin-bottom: 8px;
+    transform: translate(10.5px, 18.5px); /* Правее и ниже */
+}
+
+.podcast-card__title {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 20px; /* Было 18px */
+    color: #121723;
+    margin-bottom: 4px;
+    transform: translate(10.5px, 20px); /* Правее и ниже */
+}
+
+.podcast-card__author {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 16px; /* Было 14px */
+    color: #A1A6B4;
+    transform: translate(10.5px, 18.5px); /* Правее и ниже */
+}
+
+/* Стили для Передач */
+.shows {
+    padding: 80px 0;
+    background: #fff;
+    width: 100%; /* Меняем на 100% */
+    height: 752px;
+}
+
+.shows__title {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    color: #121723;
+    margin-bottom: 40px;
+    transform: translate(30px, 33px);
+}
+
+.shows__content {
+    display: flex;
+    gap: 30px; /* Возвращаем 30px */
+}
+
+.shows__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 255px);
+    gap: 30px;
+    flex: 1;
+    transform: translate(30px, -43px); /* Меняй X и Y здесь */
+}
+
+.show-card {
+    width: 255px;
+    height: 260px;
+    background: #fff;
+    /* УБИРАЕМ бордер отсюда */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.show-card__image {
+    width: 257px;
+    height: 148px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid #e6e8ec; /* ДОБАВЛЯЕМ бордер к картинке */
+    box-sizing: border-box; /* Чтобы бордер не увеличивал размер */
+}
+
+.show-card__content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 112px;
+    border: 1px solid #e6e8ec; /* ДОБАВЛЯЕМ бордер к контенту */
+    box-sizing: border-box;
+}
+
+.show-card__subtitle {
+    font-family: "Muller", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #121723;
+    margin-bottom: 8px;
+    transform: translate(-5px, 1px);
+}
+
+.show-card__description {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #A1A6B4;
+    margin-bottom: auto;
+    transform: translate(-5px, -4px);
+}
+
+.show-card__more-link {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    font-style: italic;
+    color: #121723;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: px; /* Фиксированное расстояние 4px */
+    margin-top: auto;
+    transform: translate(-5px, 2px);
+}
+
+.show-card__more-link:hover {
+    color: #6d31ee; /* Hover - цвет #6d31ee */
+}
+
+.show-card__more-link:hover svg path {
+    stroke: #6d31ee; /* Меняем цвет стрелки при hover */
+}
+
+.show-card__more-link:focus {
+    outline: none;
+    color: #fff; /* Focus - цвет текста #fff */
+    padding: 0px 2px;
+    width: 119px;
+    height: 20px;
+    background: #aa9dfa; /* Focus - фон #aa9dfa */
+}
+
+.show-card__more-link:focus svg path {
+    stroke: #fff; /* Белая стрелка при focus */
+}
+
+.show-card__more-link:active {
+    color: #4f28a5; /* Active - цвет #4f28a5 */
+}
+
+.show-card__more-link:active svg path {
+    stroke: #4f28a5; /* Active - цвет стрелки #4f28a5 */
+}
+
+.show-card__more-link-arrow {
+    width: 28px;
+    height: 12px;
+    flex-shrink: 0;
+}
+
+/* Возвращаем сайдбар на место */
+.shows__sidebar {
+    width: 255px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
+    transform: translate(-10px, -20px); /* Левее и выше */
+}
+
+.shows__mic-image {
+    width: 65px;
+    height: 89px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transform: translate(-55px, 295px); /* Чуть левее микрофон */
+}
+
+.shows__archive-btn {
+    background: #fff;
+    border: 2px solid #121723;
+    border-radius: 77px;
+    padding: 17px 43px;
+    width: 160px;
+    height: 40px;
+    font-family: "Muller", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #121723;
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-8px, 295px); /* Чуть левее кнопку */
+}
+
+.shows__archive-text {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #A1A6B4;
+    line-height: 150%;
+    transform: translate(40px, 297px); /* Чуть левее текст */
+}
+
+/* Стили для Гостей */
+.guests {
+    padding: 80px 0;
+    background: #121723;
+    width: 1920px;
+    height: 1316px;
+    transform: translate(30px, 33px); /* Весь блок правее и ниже */
+}
+
+.guests__title {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 100%;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.guests__subtitle {
+    font-family: "Muller", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    color: #a1a6b4;
+    margin-bottom: 20px;
+    transform: translate(0px, -7px)
+}
+
+.guests__description {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    color: #a1a6b4;
+    text-align: left;
+    margin-bottom: 60px;
+    max-width: 780px;
+    transform: translate(0px, -20px)
+}
+
+.guests__list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.guest-card {
+    display: flex;
+    width: 920px;
+    height: 272px;
+    background: transparent;
+    flex-direction: row-reverse; /* Меняем порядок - картинка слева */
+}
+
+.guest-card__content {
+    flex: 1;
+    padding-left: 30px; /* Меняем padding справа на слева */
+    display: flex;
+    flex-direction: column;
+}
+
+.guest-card__name {
+    font-family: "Muller", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 15px;
+    transform: translate(0px, -30px)
+}
+
+.guest-card__bio {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    color: #a1a6b4;
+    text-align: left;
+    margin-bottom: auto;
+    flex: 1;
+    transform: translate(0px, -37px)
+}
+
+.guest-card__button {
+    background: transparent;
+    border: 2px solid #aa9dfa;
+    border-radius: 77px;
+    padding: 10px 20px;
+    width: auto;
+    width: 160px;
+    height: 40px;
+    font-family: "Muller", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #aa9dfa;
+    cursor: pointer;
+    align-self: flex-start;
+    white-space: nowrap;
+    transform: translate(-1px, -30px); /* Кнопка на 1px ниже */
+}
+
+.guest-card__image {
+    width: 432px;
+    height: 272px;
+    object-fit: cover;
+    flex-shrink: 0;
+    transform: translate(0px, -30px);
+}
+
+/* Стили для Плейлистов */
+.playlists {
+    padding: 80px 0;
+    background: #fff;
+    width: 1920px;
+    height: 934px;
+}
+
+.playlists__title {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 100%;
+    color: #121723;
+    margin-bottom: 40px;
+    transform: translate(29px, 33px); /* Правее и ниже */
+}
+
+.playlists__content {
+    display: flex;
+    gap: 60px;
+}
+
+.playlists__info {
+    width: 350px;
+    /* УБИРАЕМ transform отсюда */
+}
+
+.playlists__warning {
+    width: 350px;
+    height: 124px;
+    transform: translate(0px, 0px); /* Переносим transform сюда */
+}
+
+.playlists__warning-text {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 138%;
+    color: #a1a6b4;
+    margin-bottom: 10px;
+    transform: translate(30px, 5px); /* Или можно применить к тексту */
+}
+
+.playlists__copyright {
+    font-family: "Muller", sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 138%;
+    color: #a1a6b4;
+    margin-bottom: 15px;
+    transform: translate(30px, -5px); /* Применяем ко всем элементам */
+}
+
+.playlists__age {
+    border: 1px solid #a1a6b4;
+    border-radius: 100px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(30px, -15px); /* И к возрасту тоже */
+}
+
+.playlists__age-text {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #a1a6b4;
+}
+
+.playlists__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 160px);
+    gap: 30px;
+    flex: 1;
+    transform: translateY(-43px); /* Поднимаем всю сетку выше */
+}
+
+.playlist-card {
+    width: 160px;
+    height: 224px;
+    border: 1px solid #e6e8ec; /* Добавляем бордер */
+}
+
+.playlist-card__image {
+    width: 160px;
+    height: 160px;
+    position: relative;
+}
+
+.playlist-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.playlist-card__flag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 20px;
+    background: #121723;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.playlist-card__content {
+    padding: 10px 0;
+    width: 160px;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.playlist-card__title {
+    font-family: "Muller", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #121723;
+    margin-bottom: 5px;
+    transform: translateX(15px);
+}
+
+.playlist-card__description {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #a1a6b4;
+    transform: translateX(15px);
+}
+
+/* Стили для Промо-блока */
+.promo {
+    padding: 80px 0;
+    background: #292e39;
+    width: 1920px;
+    height: 804px;
+}
+
+.promo__content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.promo__image {
+    width: 640px;
+    height: 562px;
+    flex-shrink: 0;
+}
+
+.promo__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: translate(25px,  30px);
+}
+
+.promo__img-discount {
+    transform: translate(25px, -543px);
+}
+
+.promo__info {
+    width: 445px;
+    height: 577px;
+    display: flex;
+    flex-direction: column;
+    transform: translate(20px, 15px);
+}
+
+.promo__title {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 100%;
+    color: #f0d288;
+    margin-bottom: 20px;
+    transform: translate(-25px, 18px);
+}
+
+.promo__pattern {
+    margin-bottom: 30px;
+    stroke-width: 1px;
+    stroke: #a1a6b4;
+    transform: translate(-25px, 18px) scale(1.35);
+    align-self: flex-start; /* Выравниваем по левому краю */
+}   
+
+.promo__text {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    color: #fff;
+    margin-bottom: 30px;
+    transform: translate(-25px, 5px); /* Такое же смещение как у title */
+}
+
+.promo__text p {
+    margin-bottom: 15px;
+}
+
+.promo__text p:last-child {
+    margin-bottom: 0;
+}
+
+.promo__price {
+    font-family: "Muller", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 30px;
+    transform: translate(-25px, 3px); /* Такое же смещение как у title */
+}
+
+.promo__button {
+    border: 2px solid #f0d288;
+    border-radius: 100px;
+    width: 300px;
+    height: 100px;
+    background: transparent;
+    font-family: "Muller", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    color: #f0d288;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transform: translate(-25px, 10px);
+    align-self: flex-start; /* Выравниваем по левому краю */
+    padding: 23px 0px;
+}
+
+.promo__button svg {
+    border-radius: 100px;
+    flex-shrink: 0; /* Запрещаем сжатие */
+    margin-right: 5px; /* Добавляем отступ справа */
+}
+
+/* Стили для О нас */
+.about {
+    padding: 80px 0;
+    background: #121723;
+    width: 1920px;
+    height: 1293px;
+    position: relative;
+}
+
+.about__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px; /* Уменьшаем отступ */
+}
+
+.about__content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.about__title {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 100%;
+    color: #fff;
+    margin-bottom: 20px;
+    transform: translate(30px,33px);
+}
+
+.about__subtitle {
+    font-family: "Muller", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    color: #a1a6b4;
+    margin-bottom: 20px;
+    transform: translate(30px,25px);
+    white-space: nowrap;
+}
+
+.about__description {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    color: #a1a6b4;
+    transform: translate(30px,13px);
+    min-width: 634px;
+}
+
+.about__decor {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    transform: translate(-30px, 50px); /* Левее и ниже */
+}
+
+.about__decor-left {
+    transform: translateY(-20px); /* Только вниз */
+}
+
+.about__team {
+    display: grid;
+    grid-template-columns: repeat(4, 255px);
+    gap: 30px;
+    margin-bottom: 40px;
+    transform: translate(30px, 0); /* Выравниваем первый бордер с текстом */
+}
+
+.team-card {
+    width: 255px;
+    height: 361px;
+    background: transparent;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.team-card__image {
+    width: 255px;
+    height: 255px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.team-card__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 0 15px 0;
+    text-align: left;
+    z-index: 2; /* Поднимаем текст над фоном */
+}
+
+.team-card__name {
+    font-family: "Muller", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 8px;
+    transform: translateY(10px); /* Дополнительно опускаем имя */
+    margin-bottom: 12px;
+}
+
+.team-card__role {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #a1a6b4;
+    transform: translate(-5px, 5px); /* Опускаем описание */
+    padding-left: 5px;
+}
+
+.about__form {
+    max-width: 920px;
+    transform: translate(30px, 0); /* Выравниваем с текстом и первым бордером */
+    margin-top: 30px; /* Добавляем расстояние 30px от описания */
+}
+
+.form__title {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #a1a6b4;
+    margin-bottom: 20px;
+}
+
+.form__message {
+    border: 1px solid #fff;
+    border-radius: 30px;
+    padding: 20px 10px 10px 25px;
+    width: 920px;
+    height: 150px; /* Увеличиваем высоту */
+    background: transparent;
+    font-family: "Muller", sans-serif;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 20px;
+    resize: none;
+    transform: translateY(-9px);
+}
+
+.form__message::placeholder {
+    transform: translate(5px, 10px); /* Текст placeholder вправо-вниз */
+    display: block;
+}
+
+.form__row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    transform: translate(0px, -3px); /* Вправо на 10px и вниз на 5px */
+}
+
+.form__group {
+    flex: 1;
+}
+
+.form__label {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #a1a6b4;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.form__input {
+    border: 1px solid #fff;
+    border-radius: 40px;
+    padding: 8px 10px 8px 25px; /* Уменьшаем padding */
+    width: 444px; /* Увеличиваем ширину на 10px */
+    height: 70px; /* Увеличиваем высоту на 10px */
+    background: transparent;
+    font-family: "Muller", sans-serif;
+    font-size:20px;
+    color: #fff;
+}
+
+.form__input::placeholder {
+    transform: translate(5px, 2px); /* Текст placeholder вправо-вниз */
+    display: block;
+}
+
+.form__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+    transform: translate(-1px, -10px);
+    padding-top: 10px; /* Добавляем отступ сверху на 3px */
+}
+
+.form__button {
+    border-radius: 40px;
+    padding: 25px 54px;; /* Уменьшаем padding */
+    width: 212px; /* Увеличиваем ширину на 10px */
+    height: 70px; /* Увеличиваем высоту на 10px */
+    background: #6d31ee;
+    border: none;
+    font-family: "Muller", sans-serif;
+    font-weight: 500;
+    font-size: 20px; /* Уменьшаем шрифт */
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.form__checkbox {
+    order: 2;
+    margin-top: 100px; /* Увеличиваем на 3px (было 20px) */
+    margin-left: -1px; /* Вправо на 10px */
+    transform: none; /* Убираем transform */
+}
+
+.form__checkbox-input {
+    width: 16px;
+    height: 16px;
+}
+
+.form__checkbox-text {
+    font-family: "Muller", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+}
+
+/* Стили для Footer */
+.footer {
+    padding: 94px 0 0 0;
+    background: #292e39;
+    width: 1920px;
+    height: 323px;
+    position: relative;
+    
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 60px;
+}
+
+.footer__left {
+    margin-left: 405px;
+}
+
+.footer__logo {
+    width: 160px;
+    height: 20px;
+    margin-bottom: 20px;
+    transform: translate(-375px, 18px);
+}
+
+.footer__social {
+    display: flex;
+    gap: 21px;
+    width: 114px;
+    height: 24px;
+}
+
+.social__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-375px, 14px);
+}
+
+.social__link svg {
+    width: 24px;
+    height: 24px;
+}
+
+.footer__columns {
+    display: flex;
+    gap: 109px;
+    margin-right: 405px;
+    border: 0px;
+    width: 445px; /* Ширина 445px */
+    height: 88px; /* Высота 88px */
+    box-sizing: border-box; /* Чтобы бордер включался в размеры */
+    transform: translate(130px, 18px);
+}
+
+.footer__column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 445px;
+    height: 88px;
+}
+
+.footer__link {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer__bottom {
+    position: absolute;
+    bottom: 37px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transform: translateY(55px);
+}
+
+.footer__pattern {
+    width: 1920px;
+    height: 12px;
+    stroke-width: 1px;
+    stroke: #f5f6f7;
+    margin-bottom: 15px;
+}
+
+.footer__copyright {
+    font-family: "Muller", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 103%;
+    color: #a1a6b4;
+    transform: translateY(-10px);
+}
